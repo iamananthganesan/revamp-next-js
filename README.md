@@ -248,3 +248,5 @@ Day - 03 07/11
 
  - Day 06 07/23
  This session is all about component library,performance 
+ Especially on image optimaization
+ 
