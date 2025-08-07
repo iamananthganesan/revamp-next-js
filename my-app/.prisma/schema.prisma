@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}// prisma/schema.prisma
+
+datasource db {
+  provider  = "postgresql"
+  url  	    = env("DATABASE_URL")
+  // uncomment next line if you use Prisma <5.10
+  // directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+model Blogs {
+    blog_id        Int      @id @default(autoincrement())
+    blog_title     String
+    blog_body      String
+    blog_publisted Boolean  @default(true)
+    createdAt      DateTime @default(now())
+    updatedAt      DateTime
+}
