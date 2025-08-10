@@ -44,7 +44,7 @@ on every request we wil getmerate makeup with data
     on every time interval we will make the blog updated by hitting the api
 
 Official documentation
-
+    https://nextjs.org/docs
 
 -Installation
     npx create-next-app@latest
@@ -164,7 +164,7 @@ Day - 03 07/11
     Can we create an API with Next js?
         Yes
     Server
-        SSC serve side component
+        SSC server side component
             you can write any js ar typscript code 
         Server action
     Project 
@@ -204,7 +204,7 @@ Day - 03 07/11
                             Prisma Studio - http://localhost:5555/
 
                             Quick Re-cap
-                                -Design Schema with prismaliser (model name along with colum names and its datatypes)
+                                -Design Schema with prismaliser (model name along with column names and its datatypes)
 
                                 -Create Database in Postgress Neon DB which is server less
 
@@ -228,6 +228,8 @@ Day - 03 07/11
                     route.js
                         const GET = async () =>{
                             //if its prisma you need to get the prisma instance 
+                                like this const prisma = new PrismaCLient();
+
                             const data = await prisma.model_name.findMany();
 
                             return NextResponse.json({
@@ -249,4 +251,54 @@ Day - 03 07/11
  - Day 06 07/23
  This session is all about component library,performance 
  Especially on image optimaization
- 
+
+ We need to make a use of the next/Images for better performance 
+
+ -Component library 
+    shadcn
+        dashboard components you can install and give a try
+        -https://ui.shadcn.com/docs
+    Magic UI
+        https://magicui.design/docs/components/marquee
+
+    you can refer to the above documents for the predefined components
+
+-Day 07 07/25 Next js Auth
+
+    - install nextauth js library
+        https://next-auth.js.org/
+            npm install next-auth
+    Authentication Pages
+        -Login Page
+            For existing user who can access the application with their previledges
+            email id
+            password
+
+            if user exist
+                -data + token
+                    - Handle the data securly
+                        -local storage
+                        -session storages
+                        -cookies
+                    -To replace this Next js team have introduced the NextAuth.js
+
+            Steps 1
+                install next-auth
+            Step 2
+                Create a catch all routing technique
+                    -api
+                        -auth
+                            -[...nextauth]  
+                                -route.js
+                            -route.js   
+            Step-3 
+                Adding Next options
+                    const handler = new NextAuth();
+        -Register Page
+        -FYI
+            -if you use Next's aext-auth 
+            -if you're using React you can use clerk for authentication
+
+            auth we can take a look into code evaluation!!!
+
+
